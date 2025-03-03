@@ -19,4 +19,19 @@ const metricCardsArray = [...metricCards];// Convert to an array
 metricCardsArray.forEach(card=> {
     card.innerText += "- Updated"; //Add text to metric cards
     card.style.backgroundColor = `green`; //Change background color to green
-})
+}
+)
+const inventorylist = document.getElementById("inventoryList");
+//
+function addInventoryItem(productName) {
+    const newItem = document.createElement("li");
+
+    newItem.setAttribute("class", "product-item");
+    newItem.innerHTML = `${productName}`;
+    inventorylist.appendChild(newItem);
+    newItem.addEventListener("click", (event)=>{
+        inventorylist.appendChild(newItem);
+    inventorylist.removeChild(newItem)
+    })
+
+}
